@@ -1,0 +1,91 @@
+.container{
+    margin: auto; /* Centrage horizontal */    height: 19rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 7%;
+    text-align: center;
+    box-shadow: 1px 0px 1px #919191; /* Décalage horizontal, vertical, flou, couleur */}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+small {
+  color: red;
+  font-size: 12px;
+  display: block;
+}
+
+}
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #5a5959;
+
+}
+input{
+    width: 95%;
+    font-size: 16px;
+    padding: 7px;
+    height: 35px;
+    border: solid 1px,#ccc;
+    border-radius: 8px;
+    color: #5a5959;
+    transition: border 0.3s ease-in-out;}
+input:hover{
+    border: 1px solid rgb(11, 107, 250); 
+}
+input:focus {
+    border: 1px solid rgb(12, 108, 253); 
+    outline: none; 
+}
+
+button{
+    width: 55%;
+    border: none;
+    border-radius: 8px;
+    color:#fff;
+    font-size: 18px;
+     margin: auto;
+    height: 35px;
+    background-color: rgb(0, 94, 234);
+}
+button:hover{
+    background-color:rgb(0, 55, 137) ;
+}
+.alert-danger {
+    background-color: #ff5364; /* Rouge légèrement plus foncé pour un meilleur contraste */
+    color: #fff;
+    max-width: 700px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 15px; /* Augmentation du padding pour plus d'espace */
+    text-align: center;
+    font-size: 16px; /* Augmente la taille du texte pour une meilleure lisibilité */
+    font-weight: bold; /* Met en valeur le message */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de relief */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Animation pour un effet d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-danger {
+    animation: fadeIn 0.3s ease-in-out;
+}

@@ -1,0 +1,20 @@
+ <h4 *ngIf="error" class="alert-danger">{{error}}</h4>
+<div class="container">
+    <h1>Se connecter</h1>
+    <form action="" class="form" [formGroup]="loginInfo" (ngSubmit)="login()">
+        <div class="input">
+            <input type="text" placeholder="pseudo" formControlName="pseudo">
+            <small *ngIf="loginInfo.get('pseudo')?.invalid && loginInfo.get('pseudo')?.touched">
+                {{ loginInfo.get('pseudo') ? getErrorMessage(loginInfo.get('pseudo')) : '' }}
+            </small>
+
+        </div>
+        <div class="input">
+            <input type="password" name="" id="" placeholder="password" formControlName="password">
+            <small *ngIf="loginInfo.get('password')?.invalid && loginInfo.get('password')?.touched">
+                {{ loginInfo.get('password') ? getErrorMessage(loginInfo.get('password')) : '' }}
+            </small>
+        </div>
+        <button type="submit" > Login </button>
+    </form>
+</div>
